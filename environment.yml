@@ -1,0 +1,30 @@
+# Using the radis environment.yml : https://github.com/radis/radis/blob/develop/environment.yml
+# Todo : switch to using Radis-Lab directly : https://github.com/radis/radis-lab
+name: radis-env
+channels:
+- conda-forge
+- astropy
+dependencies:
+- python=3.6
+- numpy
+- scipy
+- matplotlib
+- pandas>=1.0.5
+- plotly
+- numba
+- astropy  # Unit aware calculations
+- plotly>=2.5.1  # for line survey HTML output
+- termcolor  # terminal colors
+- configparser
+- astroquery>=0.3.9  # to fetch HITRAN databases
+- pytest  # to run test suite
+- joblib  # for parallel loading of SpecDatabase
+- numba  # just-in-time compiler
+- radis
+- pip
+- pip:
+  - publib>=0.3.2  # Plotting styles for Matplotlib
+  - hitran-api
+  - json-tricks>=3.13.6  # to deal with non jsonable formats
+  - mpldatacursor
+  - tables  # for pandas to HDF5 export
